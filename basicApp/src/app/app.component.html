@@ -7,10 +7,12 @@
 </div>
 <ul>
   <li>
-    <h2><a href="#">Click here</a></h2>
+    <h2><a href="#" (click)="incrementCounter()">Click here</a></h2>
   </li>
   <li>
-    <h2></h2>
+    <h2 [ngClass]="{'even' : (counter !== 0 && counter % 2 === 0),'odd' : (counter % 2 === 1)}">
+      {{counter}}
+    </h2>
   </li>
 </ul>
 <router-outlet></router-outlet>
